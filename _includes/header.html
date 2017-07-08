@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>{% if page.title %} {{ page.title }} - {{ site.title }} {% else %} {{ site.title }} {% endif %}</title>
+
+    <link rel="stylesheet" href="{{site.url}}/assets/css/app.css">
+</head>
+<body>
+
+    <div id="app">
+
+        <header class="col-xs-12">
+            <div class="presentation">
+                <div>
+                    <img class="presentation-img img-circle img-responsive center-block" src="{{site.profile_picture}}" alt="{{site.display_name}} Profile picture">
+                </div>
+
+                <div>
+                    <h1 class="presentation-title">{{site.display_name}}</h1>
+                    <p class="presentation-description">
+                        {{site.slogan}}
+                    </p>
+                </div>
+            </div>
+
+            <nav>
+                <div class="visible-xs visible-sm col-xs-12">
+                    <a href="#" class="hamburger">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </a>
+                </div>
+                <ul class="list-unstyled visible-md visible-lg">
+                    <li><a {% if page.url == '/' %} class="active" {% endif %} href="{{site.url}}">HOME</a></li>
+                    <li><a {% if page.url == '/about.html' %} class="active" {% endif %} href="{{site.url}}/about">WHAT ABOUT ME?</a></li>
+                    <li><a {% if page.url == '/journal.html' %} class="active" {% endif %} href="{{site.url}}/journal">MY JOURNAL</a></li>
+                    <li><a {% if page.url == '/portfolio.html' %} class="active" {% endif %} href="{{site.url}}/portfolio">A FEW ACCOMPLISHEMENTS</a></li>
+                    <li><a {% if page.url == '/contact.html' %} class="active" {% endif %} href="{{site.url}}/contact">HIRE ME!</a></li>
+                </ul>
+            </nav>
+
+            <div class="social text-center">
+                <a href="{{site.facebook_url}}"><img class="svg-small" src="{{'/assets/svg/social/facebook.svg' | absolute_url }}" alt=""></a>
+                <a href="{{site.twitter_url}}"><img class="svg-small" src="{{'/assets/svg/social/twitter.svg' | absolute_url }}" alt=""></a>
+                <a href="{{site.linkedin_url}}"><img class="svg-small" src="{{'/assets/svg/social/linkedin.svg' | absolute_url }}" alt=""></a>
+                <a href="{{site.github_url}}"><img class="svg-small" src="{{'/assets/svg/social/github.svg' | absolute_url }}" alt=""></a>
+                <a href="mailto:{{site.email}}"><img class="svg-small" src="{{'/assets/svg/social/mail.svg' | absolute_url }}" alt=""></a>
+                <a href="#"><img class="svg-small" src="{{'/assets/svg/flags/france.svg' | absolute_url }}" alt=""></a>
+            </div>
+        </header>
+
+        {% if page.brand_img %}
+            <div class="brand col-xs-12 col-sm-12 col-md-9 embed-responsive">
+                <img class="brand-img" src="{{page.brand_img}}" alt="">
+                <div class="brand-curtain"></div>
+
+                <div class="brand-content">
+                    <h1 class="text-center">{% if page.brand_title %}{{ page.brand_title }}{% endif %}</h1>
+                    <p>
+                        {% if page.brand_content %}{{ page.brand_content }}{% endif %}
+                    </p>
+                </div>
+            </div>
+        {% endif %}

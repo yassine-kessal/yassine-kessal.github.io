@@ -1,6 +1,9 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
+layout: default
+brand_img: http://lorempicsum.com/nemo/1200/300/4
+brand_title: Test
 ---
+
+# Welcome to my web site
+**markdown** is not working why ?
+*that's work*
