@@ -17,7 +17,9 @@
         <header class="col-xs-12">
             <div class="presentation">
                 <div>
-                    <img class="presentation-img img-circle img-responsive center-block" src="{{site.profile_picture}}" alt="{{site.display_name}} Profile picture">
+                    <a href="{{site.url}}/">
+                        <img class="presentation-img img-circle img-responsive center-block" src="{{site.profile_picture}}" alt="{{site.display_name}} Profile picture">
+                    </a>
                 </div>
 
                 <div>
@@ -37,11 +39,7 @@
                     </a>
                 </div>
                 <ul class="list-unstyled visible-md visible-lg">
-                    <li><a {% if page.url == '/' %} class="active" {% endif %} href="{{site.url}}/">HOME</a></li>
-                    <li><a {% if page.url == '/about.html' %} class="active" {% endif %} href="{{site.url}}/about">WHAT ABOUT ME?</a></li>
-                    <li><a {% if page.url == '/journal.html' %} class="active" {% endif %} href="{{site.url}}/journal">MY JOURNAL</a></li>
-                    <li><a {% if page.url == '/portfolio.html' %} class="active" {% endif %} href="{{site.url}}/portfolio">A FEW ACCOMPLISHEMENTS</a></li>
-                    <li><a {% if page.url == '/contact.html' %} class="active" {% endif %} href="{{site.url}}/contact">HIRE ME!</a></li>
+                    {% include navigation.html %}
                 </ul>
             </nav>
 
@@ -53,6 +51,10 @@
                 <a href="mailto:{{site.email}}"><img class="svg-small" src="{{'/assets/svg/social/mail.svg' | absolute_url }}" alt=""></a>
                 <a href="#"><img class="svg-small" src="{{'/assets/svg/flags/france.svg' | absolute_url }}" alt=""></a>
             </div>
+
+            <footer class="text-center">
+                <p>Created and Designed with <i class="glyphicon glyphicon-heart"></i> By {{site.display_name}}</p>
+            </footer>
         </header>
 
         {% if page.brand_img %}
