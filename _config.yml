@@ -33,6 +33,8 @@ github_url: https://github.com/yassine-kessal
 facebook_url: https://www.facebook.com/ykessal
 linkedin_url: https://www.linkedin.com/in/yassine-kessal-a70239113/
 
+pagination: 6
+
 # Build settings
 markdown: kramdown
 gems:
