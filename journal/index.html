@@ -11,7 +11,7 @@ title: Journal
 </div>
 
 <div class="posts" {% if post.image == nil %} style="margin-top: 20px" {% endif %}>
-  {% if paginator.posts.size == 0 %}
+  {% if paginator.posts.size == nil %}
     <p class="text-center">Aucun article</p>
   {% endif %}
 
