@@ -325,8 +325,8 @@ th {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.eot?f4769f9bdb7466be65088239c12046d1);
-  src: url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.eot?f4769f9bdb7466be65088239c12046d1) format("embedded-opentype"), url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.woff2?448c34a56d699c29117adc64c43affeb) format("woff2"), url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.woff?fa2772327f55d8198301fdb8bcfc8158) format("woff"), url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.ttf?e18bbf611f2a2e43afc071aa2f4e1512) format("truetype"), url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.svg?89889688147bd7575d6327160d64e760) format("svg");
+  src: url(../fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.eot?f4769f9bdb7466be65088239c12046d1);
+  src: url(../fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.eot?f4769f9bdb7466be65088239c12046d1) format("embedded-opentype"), url(../fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.woff2?448c34a56d699c29117adc64c43affeb) format("woff2"), url(../fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.woff?fa2772327f55d8198301fdb8bcfc8158) format("woff"), url(../fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.ttf?e18bbf611f2a2e43afc071aa2f4e1512) format("truetype"), url(../fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.svg?89889688147bd7575d6327160d64e760) format("svg");
 }
 
 .glyphicon {
@@ -8321,6 +8321,14 @@ button.close {
   font-size: 1.1em;
 }
 
+#content .pagination a {
+  text-decoration: none !important;
+}
+
+#content .pagination li.active a {
+  color: white;
+}
+
 @media all and (min-width: 992px) {
   #app {
     font-size: 1em;
@@ -8472,7 +8480,7 @@ button.close {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 140, 141, 0.8) url(/fonts/more.svg?10e4f9ea7a06df9e6cff981ebdbc17dc) no-repeat center;
+  background: rgba(0, 140, 141, 0.8) url(../fonts/more.svg?10e4f9ea7a06df9e6cff981ebdbc17dc) no-repeat center;
   background-size: 30px 30px;
   height: 300px;
   transition: all .5s;
@@ -8667,7 +8675,7 @@ header a:visited {
 
 header .presentation {
   margin: 20px;
-  margin-top: 30px;
+  margin-top: 10px !important;
   text-align: center;
   font-family: Raleway, sans-serif;
   font-weight: bolder;
@@ -8759,7 +8767,7 @@ header footer {
 .routing-leave.routing-leave-active {
   opacity: 0;
 }
-
+/*
 #content div {
   position: relative;
 }
@@ -8768,7 +8776,7 @@ header footer {
   position: absolute;
   top: 0;
   left: 0;
-}
+} */
 
 .loader {
   position: fixed !important;

@@ -33,12 +33,16 @@ github_url: https://github.com/yassine-kessal
 facebook_url: https://www.facebook.com/ykessal
 linkedin_url: https://www.linkedin.com/in/yassine-kessal-a70239113/
 
-pagination: 6
+paginate: 6
+paginate_path: "/journal/page:num"
+
+permalink: /journal/:title
 
 # Build settings
 markdown: kramdown
 gems:
   - jekyll-feed
+  - jekyll-paginate
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

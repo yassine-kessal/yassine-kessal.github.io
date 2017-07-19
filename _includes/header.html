@@ -49,7 +49,7 @@
                 <a href="{{site.linkedin_url}}"><img class="svg-small" src="{{'/assets/svg/social/linkedin.svg' | absolute_url }}" alt=""></a>
                 <a href="{{site.github_url}}"><img class="svg-small" src="{{'/assets/svg/social/github.svg' | absolute_url }}" alt=""></a>
                 <a href="mailto:{{site.email}}"><img class="svg-small" src="{{'/assets/svg/social/mail.svg' | absolute_url }}" alt=""></a>
-                <a href="#"><img class="svg-small" src="{{'/assets/svg/flags/france.svg' | absolute_url }}" alt=""></a>
+                <!-- <a href="#"><img class="svg-small" src="{{'/assets/svg/flags/france.svg' | absolute_url }}" alt=""></a> -->
             </div>
 
             <footer class="text-center">
@@ -69,4 +69,30 @@
                     </p>
                 </div>
             </div>
+        {% elsif page.image %}
+            <div class="brand col-xs-12 col-sm-12 col-md-9 embed-responsive">
+                <img class="brand-img" src="{{page.image}}" alt="">
+                <div class="brand-curtain"></div>
+
+                <div class="brand-content">
+                    <h1 class="text-center">{% if page.title %}{{ page.title }}{% endif %}</h1>
+                    <p>
+                        {% if page.description %}{{ page.description }}{% endif %}
+                    </p>
+                </div>
+            </div>
+        {% else page.title %}
+            <div class="col-xs-12 col-sm-12 col-md-9">
+                <h1>{{ page.title }}</h1>
+                <hr>
+            </div>
         {% endif %}
+
+        {% if page.categories %}
+            <div class="col-xs-12 col-sm-12 col-md-9 text-right">
+                {% for category in page.categories %}
+                    <a style="font-size:150%" class="label label-primary" href="{{site.url}}/journal/categories/#{{category | remove:' '}}">{{ category | capitalize }}</a>{%if forloop.last == false%}, {%endif%}
+                {% endfor %}
+            </div>
+        {% endif %}
+
