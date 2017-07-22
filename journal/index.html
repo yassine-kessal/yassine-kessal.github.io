@@ -40,7 +40,7 @@ title: Journal
 
       <div class="post-content">
           <h1><a href="{{post.url}}">{{post.title}}</a></h1>
-          <small>Category:
+          <small>{% if post.categories.size > 0 %}Category:{%endif%}
               {% for category in post.categories %}
                 <a href="{{site.url}}/journal/categories#{{category | slugify }}">{{ category | capitalize }}</a>{%if forloop.last == false%}, {%endif%}
               {% endfor %}
