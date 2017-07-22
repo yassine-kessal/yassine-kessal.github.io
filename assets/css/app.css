@@ -8658,7 +8658,6 @@ header {
   margin-top: -20px;
   padding: 0 !important;
   overflow: auto;
-  border-left: 1px solid white;
   z-index: 2;
 }
 
@@ -8754,6 +8753,7 @@ header footer {
     right: 0 !important;
     width: 25% !important;
     height: 100vh;
+    border-left: 1px solid white;
   }
 
   header:before {
