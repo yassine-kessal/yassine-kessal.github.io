@@ -8588,7 +8588,7 @@ blockquote p:before {
   display: inline-block;
   width: 25px;
   height: 20px;
-  background: url(/fonts/left-quote.svg?a1d594074776746a2129c323f0b9994a) no-repeat top left;
+  background: url(../fonts/left-quote.svg?a1d594074776746a2129c323f0b9994a) no-repeat top left;
   background-size: 20px 20px;
 }
 
@@ -8597,7 +8597,7 @@ blockquote p:after {
   display: inline-block;
   width: 25px;
   height: 20px;
-  background: url(/fonts/right-quote.svg?37bf38bdeabc9e260bd304dc2f000367) no-repeat bottom right;
+  background: url(../fonts/right-quote.svg?37bf38bdeabc9e260bd304dc2f000367) no-repeat bottom right;
   background-size: 20px 20px;
 }
 
