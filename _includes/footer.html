@@ -3,6 +3,9 @@
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
 
+  {% if page.footer != nil %}
+    {{ page.footer }}
+  {% endif %}
   <script>
     function smoothScroll(element){
       $(element).click(function(){

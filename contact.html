@@ -1,0 +1,96 @@
+---
+layout: default
+title: Contact
+footer: >
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+  <script>
+    $(function() {
+      $("#contact").validate(
+        {
+          rules: {
+            nom: "required",
+            email: {
+              required: true,
+              email: true
+            },
+            sujet: {
+              required: true,
+              minlength: 3
+            },
+            message: {
+              required: true,
+              minlength: 10
+            }
+          },
+          messages: {
+            nom: 'Votre nom complet est obligatoire',
+            email: {
+              required: 'Votre email est obligatoire',
+              email: 'Votre email est invalide',
+            },
+            sujet: {
+              required: 'Le sujet est obligatoire',
+              minlength: 'Doit avoir au minimum 3 caractéres',
+            },
+            message: {
+              required: 'Le message est obligatoire',
+              minlength: 'Doit avoir au minimum 10 caractéres',
+            },
+          },
+          errorPlacement: function(error, element) {
+            $(element).parent().addClass('has-error');
+            $(element).parent().find('.error-message').html('<small class="help-block">'+$(error).text()+'</small>');
+          },
+          success: function (label, element) {
+            $(element).parent().removeClass('has-error').addClass('has-success');
+          }
+        }
+      );
+    })
+  </script>
+---
+<div class="row">
+  <div class="col-md-8">
+    <form id="contact" action="https://getsimpleform.com/messages?form_api_token=4655e6c771573afa538ea0aef043cf0a" method="POST">
+      <input type='hidden' name='redirect_to' value='{{site.url}}/contact_success' />
+
+      <div class="form-group">
+        <input type="text" name="nom" placeholder="Nom et Prénom" class="form-control">
+        <small class="help-block error-message"></small>
+      </div>
+
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Email" class="form-control">
+        <small class="help-block error-message"></small>
+        <small class="help-block" style="color: gray">Ne sera jamais communiquer en publique.</small>
+      </div>
+
+      <div class="form-group">
+        <input type="text" name="sujet" placeholder="Sujet" class="form-control">
+        <small class="help-block error-message"></small>
+      </div>
+
+      <div class="form-group">
+        <textarea rows="10" name="message" placeholder="Message" class="form-control"></textarea>
+        <small class="help-block error-message"></small>
+      </div>
+
+      <div class="form-group text-center">
+        <button class="btn btn-success" type="submit">Envoyer</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="col-md-4">
+    <p>Que se soit pour une salutation, un devis ou toutes autres choses! Vous pouvez utiliser ce formulaire ou les réseaux sociaux ci dessous pour me contactez.</p>
+    <hr>
+    <div style="font-size: 120%">Réseaux Sociaux</div>
+    <p class="text-center">
+      <a href="{{site.facebook_url}}"><img src="https://png.icons8.com/facebook/dusk/64" title="Facebook" width="48" height="48"></a>
+      <a href="{{site.twitter_url}}"><img src="https://png.icons8.com/twitter/dusk/64" title="Twitter" width="48" height="48"></a>
+      <a href="{{site.github_url}}"><img src="https://png.icons8.com/github/dusk/64" title="Github" width="48" height="48"></a>
+      <a href="{{site.linkedin_url}}"><img src="https://png.icons8.com/linkedin/dusk/64" title="Linkedin" width="48" height="48"></a>
+      <a href="mailto:{{site.email}}"><img src="https://png.icons8.com/email/dusk/64" title="Email" width="48" height="48"></a>
+    </p>
+  </div>
+</div>
