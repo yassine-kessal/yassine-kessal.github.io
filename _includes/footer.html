@@ -1,7 +1,11 @@
+
+  </div>
+
   <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
 
   {% if page.footer != nil %}
     {{ page.footer }}
@@ -37,6 +41,10 @@
     };
 
     $(function() {
+      $("img:not(.without-lazy)").lazyload({
+        effect : "fadeIn"
+      });
+
       var menuShowed = false;
 
       $('.hamburger').click(function(e) {
