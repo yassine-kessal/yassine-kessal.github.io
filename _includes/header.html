@@ -81,19 +81,42 @@
                     <p>
                         {% if page.description %}{{ page.description }}{% endif %}
                     </p>
+                    <p class="brand-info text-right">
+                        {% if page.categories.size > 0 %}
+                            Catégories:
+                            {% for category in page.categories %}
+                                <a href="{{site.url}}/journal/categories#{{category | slugify}}">{{ category | capitalize }}</a>{%if forloop.last == false%}, {%endif%}
+                            {% endfor %}
+                        {% endif %}
+
+                        {% if page.tags.size > 0 %}
+                            <i style="font-size: 70%" class="glyphicon glyphicon-tags"></i>
+                            {% for tag in page.tags %}
+                                <a href="{{site.url}}/journal/tags#{{tag | slugify}}">{{ tag | capitalize }}</a>{%if forloop.last == false%}, {%endif%}
+                            {% endfor %}
+                        {% endif %}
+                    </p>
                 </div>
             </div>
         {% elsif page.title %}
             <div class="col-xs-12 col-sm-12 col-md-9 text-center">
                 <h1>{{ page.title }}</h1>
-                <hr class="col-md-8 col-md-offset-2">
-            </div>
-        {% endif %}
 
-        {% if page.categories %}
-            <div class="col-xs-12 col-sm-12 col-md-9 text-right">
-                {% for category in page.categories %}
-                    <a style="font-size:150%" class="label label-primary" href="{{site.url}}/journal/categories#{{category | remove:' '}}">{{ category | capitalize }}</a>{%if forloop.last == false%}, {%endif%}
-                {% endfor %}
+                <p class="text-right">
+                    {% if page.categories.size > 0 %}
+                        Catégories:
+                        {% for category in page.categories %}
+                            <a href="{{site.url}}/journal/categories#{{category | slugify}}">{{ category | capitalize }}</a>{%if forloop.last == false%}, {%endif%}
+                        {% endfor %}
+                    {% endif %}
+
+                    {% if page.tags.size > 0 %}
+                        <i style="font-size: 70%" class="glyphicon glyphicon-tags"></i>
+                        {% for tag in page.tags %}
+                            <a href="{{site.url}}/journal/tags#{{tag | slugify}}">{{ tag | capitalize }}</a>{%if forloop.last == false%}, {%endif%}
+                        {% endfor %}
+                    {% endif %}
+                </p>
+                <hr class="col-md-8 col-md-offset-2">
             </div>
         {% endif %}
