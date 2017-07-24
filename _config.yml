@@ -17,7 +17,6 @@ title: Yassine Kessal
 email: yassine.ronni.kessal@outlook.com
 display_name: Yassine Kessal
 
-# TODO: use image plugin to resize this picture (if it's supported by github, if not leave like that)
 profile_picture: https://scontent-mrs1-1.xx.fbcdn.net/v/t1.0-9/15822651_1241951439184025_3125284242249075910_n.jpg?oh=e0bc932fcff4f60ee2349a8e82a88854&oe=59E6F5D4
 
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -37,8 +36,8 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-paginate
-  - jekyll-seo-tag
-  - jemoji
+  # - jekyll-seo-tag
+  # - jemoji
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
