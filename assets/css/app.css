@@ -8756,6 +8756,10 @@ header footer {
     border-left: 1px solid white;
   }
 
+  header nav li:last-child a {
+    border-bottom: 2px solid #ecf0f1;
+  }
+
   header:before {
     position: fixed;
   }

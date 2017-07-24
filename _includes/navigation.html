@@ -1,4 +1,7 @@
-<li><a {% if page.url == '/' %} class="active" {% endif %} href="{{site.url}}/">À PROPOS</a></li>
-<li><a {% if page.url contains 'journal' %} class="active" {% endif %} href="{{site.url}}/journal">BLOG</a></li>
-<!-- <li><a {% if page.url contains '/portfolio.html' %} class="active" {% endif %} href="{{site.url}}/portfolio">A FEW ACCOMPLISHEMENTS</a></li> -->
-<li><a {% if page.url contains 'contact' %} class="active" {% endif %} href="{{site.url}}/contact">ME CONTACTEZ!</a></li>
+<div class="">
+<li class="col-sm-6"><a {% if page.url == '/' %} class="active" {% endif %} href="{{site.url}}/">À PROPOS</a></li>
+<li class="col-sm-6"><a {% if page.url contains 'journal' %} class="active" {% endif %} href="{{site.url}}/journal">BLOG</a></li>
+<li class="col-sm-6"><a {% if page.url contains '/loisirs' %} class="active" {% endif %} href="{{site.url}}/loisirs">LOISIRS</a></li>
+<li class="col-sm-6"><a {% if page.url contains 'contact' %} class="active" {% endif %} href="{{site.url}}/contact">ME CONTACTEZ!</a></li>
+</div>
+<div class="clearfix"></div>
