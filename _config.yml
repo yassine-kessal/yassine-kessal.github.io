@@ -33,7 +33,7 @@ permalink: /journal/:title
 
 # Build settings
 markdown: kramdown
-plugins:
+gems:
   - jekyll-feed
   - jekyll-paginate
   # - jekyll-seo-tag
