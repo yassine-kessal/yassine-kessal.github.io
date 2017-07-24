@@ -8766,46 +8766,6 @@ header footer {
   }
 }
 
-@-webkit-keyframes spinner-anim {
-  0% {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
-    opacity: 0;
-  }
-
-  50% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-    opacity: 1;
-  }
-
-  100% {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
-    opacity: 0;
-  }
-}
-
-@keyframes spinner-anim {
-  0% {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
-    opacity: 0;
-  }
-
-  50% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-    opacity: 1;
-  }
-
-  100% {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
-    opacity: 0;
-  }
-}
-
 hr
 {
   border: none;
@@ -8841,4 +8801,14 @@ hr
   z-index:99;
   bottom: 20px;
   right: 20px;
+}
+
+dd:before
+{
+  content: '> ';
+}
+
+.btn
+{
+  text-decoration: none;
 }
