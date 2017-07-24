@@ -34,7 +34,7 @@ permalink: /journal/:title
 
 # Build settings
 markdown: kramdown
-gems:
+plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-minifier
