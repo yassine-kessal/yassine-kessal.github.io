@@ -1,4 +1,97 @@
 ---
 layout: default
 title: Loisirs
+footer: >
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script>
+    $(function() {
+      $('[data-toggle="tooltip"]').tooltip()
+
+      $('.grid').masonry({
+        // options
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        transitionDuration: '0.4s',
+        horizontalOrder: false,
+        percentPosition: true
+      });
+    });
+  </script>
 ---
+<style>
+  .grid { margin-bottom: 20px; }
+  .grid-sizer, .grid-item { margin: 0; display: block; position: relative; width: 10%; }
+  .grid-item .curtain { position: absolute; width: 100%; height: 100%; background: rgba(224, 224, 224,0.8) url({{site.url}}/assets/fonts/more-black.svg) no-repeat center; background-size: 30px 30px; transition: all .3s; opacity: 0; }
+  .grid-item:hover .curtain { opacity: 1; }
+  .w2 { width: 20%; }
+  .w3 { width: 30%; }
+  .w4 { width: 40%; }
+  .h1 { height: 100px; }
+  .h2 { height: 200px; }
+  .h3 { height: 300px; }
+  .h4 { height: 400px; }
+
+  @media all and (max-width: 750px)
+  {
+    .grid-item, .w-m-1 { width: 25%; }
+    .w2, .w-m-2 { width: 50%; }
+    .w3, .w-m-3 { width: 100%; }
+    .w4 { width: 100%; }
+  }
+</style>
+
+<div class="grid">
+  <div class="grid-sizer"></div>
+  <a href="https://fr.wikipedia.org/wiki/The_Big_Bang_Theory" data-toggle="tooltip" style="background: url({{site.url}}/assets/images/loisirs/bigbangtheory.jpg) no-repeat center; background-size: cover;" data-placement="top" title="The Big Bang Theory" class="grid-item w4 h2 embed-responsive">
+    <div class="curtain"></div>
+  </a>
+  <a href="https://fr.wikipedia.org/wiki/L%27Attaque_des_Titans" data-toggle="tooltip" style="background: url({{site.url}}/assets/images/loisirs/attaquedestitans.jpg) no-repeat center; background-size: cover;" data-placement="top" title="L'Attaque Des Titans" class="grid-item w2 h1 embed-responsive">
+    <div class="curtain"></div>
+  </a>
+  <a href="https://fr.wikipedia.org/wiki/CrossFit" data-toggle="tooltip" style="background: url({{site.url}}/assets/images/loisirs/crossfit.jpg) no-repeat center; background-size: cover;" data-placement="top" title="Crossfit" class="grid-item w1 w-m-2 h1 embed-responsive">
+    <div class="curtain"></div>
+  </a>
+  <a href="https://fr.wikipedia.org/wiki/La_Voleuse_de_livres" data-toggle="tooltip" style="background: url({{site.url}}/assets/images/loisirs/thebookthief.jpg) no-repeat center; background-size: cover;" data-placement="top" title="The Book Thief" class="grid-item w3 h2 embed-responsive">
+    <div class="curtain"></div>
+  </a>
+  <a href="https://fr.wikipedia.org/wiki/Naruto" data-toggle="tooltip" style="background: url({{site.url}}/assets/images/loisirs/naruto.jpg) no-repeat center; background-size: cover;" data-placement="top" title="Naruto" class="grid-item w3 h1 embed-responsive">
+    <div class="curtain"></div>
+  </a>
+  <a href="http://blog.counter-strike.net/" data-toggle="tooltip" style="background: url({{site.url}}/assets/images/loisirs/csgo.jpg) no-repeat center; background-size: cover;" data-placement="top" title="CS GO" class="grid-item w4 h3 embed-responsive">
+    <div class="curtain"></div>
+  </a>
+  <a href="https://www.wonderhill.com/fr/games/dragons-of-atlantis" data-toggle="tooltip" style="background: url({{site.url}}/assets/images/loisirs/doa.jpg) no-repeat center; background-size: cover;" data-placement="top" title="Dragon Of Atlantis" class="grid-item w2 h1 embed-responsive">
+    <div class="curtain"></div>
+  </a>
+  <a href="https://fr.wikipedia.org/wiki/American_Dad!" data-toggle="tooltip" style="background: url({{site.url}}/assets/images/loisirs/americandad.jpg) no-repeat center; background-size: cover;" data-placement="top" title="American Dad" class="grid-item w2 h3 embed-responsive">
+    <div class="curtain"></div>
+  </a>
+  <a href="https://fr.wikipedia.org/wiki/Futurama" data-toggle="tooltip" style="background: url({{site.url}}/assets/images/loisirs/futurama.png) no-repeat center; background-size: cover;" data-placement="top" title="Futurama" class="grid-item w2 h2 embed-responsive">
+    <div class="curtain"></div>
+  </a>
+  <a href="https://fr.wikipedia.org/wiki/Les_Simpson" data-toggle="tooltip" style="background: url({{site.url}}/assets/images/loisirs/simpson.jpg) no-repeat center; background-size: cover;" data-placement="top" title="Les Simpson" class="grid-item w3 h2 embed-responsive">
+    <div class="curtain"></div>
+  </a>
+  <a href="https://fr.wikipedia.org/wiki/Game_of_Thrones" data-toggle="tooltip" style="background: url({{site.url}}/assets/images/loisirs/got.jpg) no-repeat center; background-size: cover;" data-placement="top" title="Game Of Thrones" class="grid-item w2 h1 embed-responsive">
+    <div class="curtain"></div>
+  </a>
+  <a href="https://fr.wikipedia.org/wiki/The_Walking_Dead_(s%C3%A9rie_t%C3%A9l%C3%A9vis%C3%A9e)" data-toggle="tooltip" style="background: url({{site.url}}/assets/images/loisirs/wad.jpg) no-repeat center; background-size: cover;" data-placement="top" title="The Walking Dead" class="grid-item w2 h1 embed-responsive">
+    <div class="curtain"></div>
+  </a>
+  <a href="https://fr.wikipedia.org/wiki/Malcolm_(s%C3%A9rie_t%C3%A9l%C3%A9vis%C3%A9e)" data-toggle="tooltip" style="background: url({{site.url}}/assets/images/loisirs/malcolm.jpg) no-repeat center; background-size: cover;" data-placement="top" title="Malcolm" class="grid-item w4 h2 embed-responsive">
+    <div class="curtain"></div>
+  </a>
+  <a href="https://fr.wikipedia.org/wiki/Tokyo_Ghoul" data-toggle="tooltip" style="background: url({{site.url}}/assets/images/loisirs/tg.jpg) no-repeat center; background-size: cover;" data-placement="top" title="Tokyo Ghoul" class="grid-item w2 h1 embed-responsive">
+    <div class="curtain"></div>
+  </a>
+  <a href="https://fr.wikipedia.org/wiki/Death_Note" data-toggle="tooltip" style="background: url({{site.url}}/assets/images/loisirs/dn.jpg) no-repeat center; background-size: cover;" data-placement="top" title="Death Note" class="grid-item w2 h1 embed-responsive">
+    <div class="curtain"></div>
+  </a>
+  <a href="https://fr.wikipedia.org/wiki/Windows" data-toggle="tooltip" style="background: url({{site.url}}/assets/images/loisirs/windows.jpg) no-repeat center; background-size: cover;" data-placement="top" title="Windows" class="grid-item w2 h1 embed-responsive">
+    <div class="curtain"></div>
+  </a>
+  <a href="https://fr.wikipedia.org/wiki/One_Punch_Man" data-toggle="tooltip" style="background: url({{site.url}}/assets/images/loisirs/onepunchman.jpg) no-repeat right; background-size: cover;" data-placement="top" title="One Punch Man" class="grid-item w-m-2 h2 embed-responsive">
+    <div class="curtain"></div>
+  </a>
+</div>
