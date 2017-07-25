@@ -1,12 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600|Lato|PT+Sans);@import url(https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css);@charset "UTF-8";
-
-
-
-
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600|Lato|PT+Sans);@import url(https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css);
+@charset "UTF-8";
 
 @font-face {
   font-family: Fontin;
-  src: url(../fonts/Fontin-Regular.ttf?3a5472bdba730aa8fc43ce6aa6dcf723);
+  src: url(../fonts/Fontin-Regular.ttf);
 }
 
 /*!
@@ -1856,16 +1853,16 @@ dd {
 @media (min-width: 768px) {
   .dl-horizontal dt {
     float: left;
-    width: 160px;
+    width: 100px;
     clear: left;
-    text-align: right;
+    text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
   .dl-horizontal dd {
-    margin-left: 180px;
+    margin-left: 50px;
   }
 }
 
@@ -8480,7 +8477,7 @@ button.close {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 140, 141, 0.8) url(../fonts/more.svg?10e4f9ea7a06df9e6cff981ebdbc17dc) no-repeat center;
+  background: rgba(0, 140, 141, 0.8) url(../fonts/more.svg) no-repeat center;
   background-size: 30px 30px;
   height: 300px;
   transition: all .5s;
@@ -8588,7 +8585,7 @@ blockquote p:before {
   display: inline-block;
   width: 25px;
   height: 20px;
-  background: url(../fonts/left-quote.svg?a1d594074776746a2129c323f0b9994a) no-repeat top left;
+  background: url(../fonts/left-quote.svg) no-repeat top left;
   background-size: 20px 20px;
 }
 
@@ -8597,7 +8594,7 @@ blockquote p:after {
   display: inline-block;
   width: 25px;
   height: 20px;
-  background: url(../fonts/right-quote.svg?37bf38bdeabc9e260bd304dc2f000367) no-repeat bottom right;
+  background: url(../fonts/right-quote.svg) no-repeat bottom right;
   background-size: 20px 20px;
 }
 
@@ -8652,7 +8649,7 @@ blockquote p:after {
 }
 
 header {
-  background: url(../images/mountain.jpg?1a446c6d448e63ec4ae15a4121f6e0ba) no-repeat;
+  background: url(../images/mountain.jpg) no-repeat;
   background-size: cover;
   color: white;
   margin-top: -20px;
