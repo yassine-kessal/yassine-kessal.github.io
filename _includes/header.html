@@ -75,7 +75,7 @@
 
         {% if page.brand_img %}
             <div class="brand col-xs-12 col-sm-12 col-md-9 embed-responsive" style="{% if page.brand_height %}height:{{page.brand_height}}{%else%}height: 300px{%endif%}">
-                <img class="brand-img {%if page.cover%}cover{%endif%}" src="{% if not contains 'http://' %} {{site.url}} {%endif%}{{page.brand_img}}" alt="">
+                <img class="brand-img img-responsive" src="{% if not contains 'http://' %} {{site.url}} {%endif%}{{page.brand_img}}" alt="">
                 <div class="brand-curtain" style="{% if page.brand_height %}height:{{page.brand_height}}{%else%}height: 300px{%endif%}"></div>
 
                 <div class="brand-content">
@@ -87,7 +87,7 @@
             </div>
         {% elsif page.image %}
             <div class="brand col-xs-12 col-sm-12 col-md-9 embed-responsive" style="{% if page.brand_height %}height:{{page.brand_height}}{%else%}height: 300px{%endif%}">
-                <img class="brand-img {%if page.cover%}cover{%endif%}" data-original="{% if not contains 'http://' %} {{site.url}} {%endif%}{{page.image}}" alt="">
+                <img class="brand-img img-responsive" data-original="{% if not contains 'http://' %} {{site.url}} {%endif%}{{page.image}}" alt="">
                 <div class="brand-curtain" style="{% if page.brand_height %}height:{{page.brand_height}}{%else%}height: 300px{%endif%}"></div>
 
                 <div class="brand-content">
