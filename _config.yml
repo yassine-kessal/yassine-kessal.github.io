@@ -22,7 +22,7 @@ url: "https://yassine-kessal.github.io" # the base hostname & protocol for your 
 twitter_url: https://twitter.com/yassine_kessal
 github_url: https://github.com/yassine-kessal
 facebook_url: https://www.facebook.com/ykessal
-linkedin_url: https://www.linkedin.com/in/yassine-kessal-a70239113/
+linkedin_url: https://www.linkedin.com/in/yassine-kessal/
 
 paginate: 6
 paginate_path: "/journal/page:num"
