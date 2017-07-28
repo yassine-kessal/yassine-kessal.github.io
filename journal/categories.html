@@ -10,11 +10,13 @@ title: Categories
 
 {% for category in site.categories %}
   <h2 id="#{{category | first | slugify}}">{{category | first | capitalize }} : </h2>
-  <div style="padding-left: 30px">
+  <dl style="padding-left: 30px">
     {% for posts in category %}
       {% for post in posts %}
-        <a href="{{post.url}}">{{ post.title }}</a>
+        {% if post.title.size > 0 %}
+          <dd><a href="{{post.url}}">{{ post.title }}</a></dd>
+        {% endif %}
       {% endfor %}
     {% endfor %}
-  </div>
+  </dl>
 {% endfor %}

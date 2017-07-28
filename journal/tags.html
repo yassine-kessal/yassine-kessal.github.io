@@ -39,13 +39,15 @@ The following part removes dulpicated tags and invalid tags like blank tag.
 
 {% for tag in tags %}
 	<h2 id="{{ tag | slugify }}">{{ tag }}</h2>
-  <div style="padding-left: 30px">
+  <dl style="padding-left: 30px">
 	 {% for post in site.posts %}
 		 {% if post.tags contains tag %}
-      <a href="{{ post.url }}">
-      {{ post.title }}
-      </a>
+			{% if post.title.size > 0 %}
+				<dd><a href="{{ post.url }}">
+					{{ post.title }}
+				</a></dd>
+			{% endif %}
 		 {% endif %}
 	 {% endfor %}
-	</div>
+	</dl>
 {% endfor %}
