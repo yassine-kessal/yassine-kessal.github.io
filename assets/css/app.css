@@ -8477,17 +8477,15 @@ button.close {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 140, 141, 0.8) url(../fonts/more.svg) no-repeat center;
+  background: rgba(0, 0, 0, 0.8) url(../fonts/more.svg) no-repeat center;
   background-size: 30px 30px;
   height: 300px;
   transition: all .5s;
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  opacity:0;
 }
 
 #content .post .post-img:hover .post-img-curtain {
-  -webkit-transform: scale(2);
-          transform: scale(2);
+  opacity:1;
 }
 
 #content .post .post-content {
