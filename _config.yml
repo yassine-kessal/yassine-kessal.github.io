@@ -22,7 +22,26 @@ url: "https://yassine-kessal.github.io" # the base hostname & protocol for your 
 twitter_url: https://twitter.com/yassine_kessal
 github_url: https://github.com/yassine-kessal
 facebook_url: https://www.facebook.com/ykessal
-linkedin_url: https://www.linkedin.com/in/yassine-kessal/
+linkedin_url: https://www.linkedin.com/in/yassine-kessal
+
+twitter:
+  username: yassine_kessal
+
+facebook:
+  admins: 100001075414435
+
+social:
+  name: Yassine Kessal
+  links:
+    - https://twitter.com/yassine_kessal
+    - https://www.facebook.com/ykessal
+    - https://www.linkedin.com/in/yassine-kessal
+    - https://github.com/yassine-kessal
+
+lang: fr_FR
+author: Yassine Kessal
+
+logo: /assets/logo.jpg
 
 paginate: 6
 paginate_path: "/journal/page:num"
