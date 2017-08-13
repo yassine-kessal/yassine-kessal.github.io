@@ -18,7 +18,11 @@ gulp.task('css', function() {
 
 gulp.task('js', function() {
   return gulp.src(jsFiles)
-         .pipe(uglify())
+         .pipe(uglify({
+             output: {
+                 comments: true
+             }
+         }))
          .pipe(rename({suffix: '.min'}))
          .pipe(gulp.dest(jsDest));
 });

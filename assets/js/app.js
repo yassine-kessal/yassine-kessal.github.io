@@ -1,3 +1,6 @@
+/**
+ATTENTION: Ce site est la propriété de Yassine Kessal! Vous pouvez regarder le code source et vous inspirer mais toute réutilisation ou reproduction est interdite.
+**/
 function smoothScroll(element){
   $(element).click(function(){
     var goscroll = false;
