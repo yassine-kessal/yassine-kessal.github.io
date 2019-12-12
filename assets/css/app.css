@@ -4,8 +4,6 @@ ATTENTION: Ce site est la propriété de Yassine Kessal! Vous pouvez regarder le
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600|Lato|PT+Sans);@import url(https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css);
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap');
-
 @font-face {
   font-family: Fontin;
   src: url(../fonts/Fontin-Regular.ttf);
@@ -1407,7 +1405,7 @@ html {
 }
 
 body {
-  font-family: "Lato", "Open Sans", sans-serif;
+  font-family: Fontin, "Lato", "Open Sans", sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
@@ -5918,7 +5916,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 
 .breadcrumb > li + li:before {
-  content: "/ ";
+  content: "/ ";
   padding: 0 5px;
   color: #ccc;
 }
@@ -8705,11 +8703,10 @@ header .presentation h1.presentation-title {
   font-family: Fontin, Lato, sans-serif;
   margin-bottom: 7px;
   margin-top: 10px;
-  font-size: 2.5em;
 }
 
 header .presentation p.presentation-description {
-  font-size: 1.5em;
+  font-size: 110%;
   font-weight: bolder;
 }
 
